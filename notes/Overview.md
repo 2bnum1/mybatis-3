@@ -1,4 +1,4 @@
-# 目录结构
+# 1. 目录结构
 
 MyBatis 源代码的 `src` 文件夹下的各个一级目录的含义如下：
 
@@ -40,3 +40,24 @@ MyBatis 源代码的 `src` 文件夹下的各个一级目录的含义如下：
 - `org.apache.ibatis.type`：包含了 MyBatis 类型处理器相关的类，用于处理 Java 对象与数据库字段之间的转换。
 
 这些目录和包结构组织了 MyBatis 源代码的各个模块，每个模块负责不同的功能，共同构成了 MyBatis 框架的核心部分。
+
+# 2. 阅读顺序
+
+理解 MyBatis 源代码的最佳顺序可以按照以下方式来阅读 `main/java` 目录下的子目录：
+
+- [ ] `org.apache.ibatis.exceptions`：开始阅读异常相关的类，以了解 MyBatis 运行时可能出现的异常情况和异常处理机制。
+- [ ] `org.apache.ibatis.logging`：接着阅读日志相关的类，了解 MyBatis 如何记录运行时的日志信息，以及日志记录器的配置和实现。
+- [ ] `org.apache.ibatis.lang` 和 `org.apache.ibatis.util`：这些通用工具类可以在阅读其他模块时使用，因此可以提前了解它们，以便更好地理解其他代码的实现。
+- [ ] `org.apache.ibatis.parsing`：阅读解析相关的类，了解 MyBatis 如何解析 XML 配置文件和 SQL 语句，以及解析过程中涉及的关键逻辑和数据结构。
+- [ ] `org.apache.ibatis.builder`：接下来阅读构建器相关的类，了解 MyBatis 如何构建配置对象、语句对象等，以及构建过程中涉及的关键逻辑和数据结构。
+- [ ] `org.apache.ibatis.scripting`：继续阅读脚本相关的类，了解 MyBatis 如何解析和执行动态 SQL 语句，以及动态 SQL 的实现原理和机制。
+- [ ] `org.apache.ibatis.binding`：阅读绑定相关的类，了解 MyBatis 如何将接口和映射器文件进行绑定，生成代理对象，并实现接口的方法。
+- [ ] `org.apache.ibatis.cursor`：继续阅读游标相关的类，了解 MyBatis 如何处理大数据量的查询结果，以及游标的使用和优化。
+- [ ] `org.apache.ibatis.session`：阅读会话相关的类，了解 MyBatis 的会话管理和事务处理机制，以及会话的生命周期和作用域。
+- [ ] `org.apache.ibatis.executor`：继续阅读执行器相关的类，了解 MyBatis 如何执行 SQL 语句，包括查询和更新操作，以及执行过程中的缓存处理和结果映射等。
+- [ ] `org.apache.ibatis.mapping`：继续阅读映射相关的类，了解 MyBatis 如何将 Java 对象和数据库表进行映射，包括参数映射和结果映射的实现。
+- [ ] `org.apache.ibatis.datasource` 和 `org.apache.ibatis.transaction`：最后阅读数据源和事务相关的类，了解 MyBatis
+  如何管理数据库连接和事务的获取、提交和回滚。
+
+这个阅读顺序可以帮助你逐步理解 MyBatis 的核心模块和功能，并按照逻辑顺序阅读代码，逐步揭示 MyBatis
+的实现细节和设计思路。当然，根据你的实际需求和兴趣，你也可以选择自己感兴趣的模块先进行深入阅读。
