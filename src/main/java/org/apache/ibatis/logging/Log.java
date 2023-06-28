@@ -16,6 +16,13 @@
 package org.apache.ibatis.logging;
 
 /**
+ * 由Mybatis定义的日志功能
+ * 是否支持debug, 是否支持trace, 打印error,debug,trace,warn级别的日志
+ * Log接口的实现类:
+ * 1. 日志框架, 例如Slf4j, Log4j
+ * 2. StdoutImpl: 打印在控制台
+ * 3. NoLoggingImpl: 没有任何日志
+ *
  * @author Clinton Begin
  */
 public interface Log {
